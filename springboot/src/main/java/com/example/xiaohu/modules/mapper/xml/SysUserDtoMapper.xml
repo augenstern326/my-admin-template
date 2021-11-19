@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.xiaohu.modules.mapper.SysUserDtoMapper">
+    <resultMap id="SysUserDto" type="com.example.xiaohu.modules.dto.SysUserDto">
+        <result column="id" property="id" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
+        <result column="status" property="status" jdbcType="VARCHAR"/>
+        <result column="createTime" property="createTime" jdbcType="DATE"/>
+        <result column="roleName" property="roleName" jdbcType="VARCHAR"/>
+        <result column="description" property="description" jdbcType="VARCHAR"/>
+    </resultMap>
+    <select id="listSysUserDto" resultType="com.example.xiaohu.modules.dto.SysUserDto">
+        select su.id,su.username,su.status,su.create_Time createTime,sr.role_Name roleName,sr.description from SYS_USER su
+        left join SYS_USER_ROLE sur on su.id = sur.user_id
+        left join SYS_ROLE sr on sr.id = sur.role_id
+    </select>
+</mapper>

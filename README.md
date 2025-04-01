@@ -14,16 +14,11 @@
 
 前端
 
-http://110.40.175.203:8080/
 
 |用户名|密码|角色|菜单栏显示|
 |-|-|-|-|
 |admin|123456|admin|首页、信息系统、Markdown、项目源码、接口文档、druid监控、用户管理、角色管理|
 |xiaoming|123456|user|首页、信息系统、Markdown、项目源码|
-
-后端
-
-http://110.40.175.203:9000/myAdminTemplate/doc.html#/home
 
 
 
@@ -102,7 +97,3 @@ springboot/main/resources/SQL
 [Ant Design VUe](https://www.antdv.com/docs/vue/introduce-cn/)
 
 [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-
-联系:
-
-QQ: 1792427522（欢迎交流，添加备注)
